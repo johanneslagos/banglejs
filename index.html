@@ -15,6 +15,6 @@
   </script> 
   <button onclick="UART.write('LED1.set();\n');">LED On!</button>
   <button onclick="UART.write('LED1.reset();\n');">LED Off!</button>
-  <button onclick="green()">Screen green</button>
+  <button onclick="UART.write('g.setColor(0,1,0);\n');">Screen green</button>
  </body>
 </html>
