@@ -3,7 +3,18 @@
  </head>
  <body>
   <script src="https://www.espruino.com/js/uart.js"></script>
+  <script>
+      function green() {
+          UART.write('Bangle.setLCDPower(1);\n');
+          UART.write('g.clear();\n');
+          UART.write('g.setColor(0,1,0);\n');
+          UART.write('g.fillCircle(g.getWidth()/2, g.getHeight()/2+10, 105);\n');
+          UART.write('nextLightGreen = false;\n');
+  
+  }
+  </script> 
   <button onclick="UART.write('LED1.set();\n');">LED On!</button>
   <button onclick="UART.write('LED1.reset();\n');">LED Off!</button>
+  <button onclick="green()">Screen green</button>
  </body>
 </html>
