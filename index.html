@@ -2,19 +2,25 @@
  <head>
  </head>
  <body>
-  <script src="https://www.puck-js.com/puck.js"></script>
   <script type="text/javascript">
-      function green() {
-          Puck.write('Bangle.setLCDPower(1);\n');
-          Puck.write('g.clear();\n');
-          Puck.write('g.setColor(0,1,0);\n');
-          Puck.write('g.fillCircle(g.getWidth()/2, g.getHeight()/2+10, 105);\n');
-          Puck.write('nextLightGreen = false;\n');
-  
-  }
+      function downCounter () {
+            var counter = document.getElementById('counter').innerHTML;
+
+            var total = 100;
+            var myfunc = setInterval(function(){
+                document.getElementById('counter').innerHTML = total + "s";
+                total--;
+
+                if( total < 0) {
+                    clearInterval(myfunc);
+                    document.getElementById('counter').innerHTML = "Time Up";
+                }
+            }, 1000);
+      }
+
+     
   </script> 
-  <button onclick="Puck.write('LED1.set();\n');">LED On!</button>
-  <button onclick="Puck.write('LED1.reset();\n');">LED Off!</button>
-  <button onclick="green()">Screen green</button>
+  <button onclick="downCounter()">Start teller</button>
+  <div id="counter"> </div> 
  </body>
 </html>

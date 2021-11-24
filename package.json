@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/johanneslagos/banglejs/issues"
   },
-  "homepage": "https://github.com/johanneslagos/banglejs#readme"
+  "homepage": "https://github.com/johanneslagos/banglejs#readme",
+  "dependencies": {
+    "@abandonware/noble": "^1.9.2-15",
+    "@mapbox/node-pre-gyp": "^1.0.7",
+    "espruino": "^0.1.40",
+    "espruino-ble-uart": "^1.0.3",
+    "noble": "^1.9.1",
+    "noble-mac": "https://github.com/Timeular/noble-mac.git"
+  }
 }
